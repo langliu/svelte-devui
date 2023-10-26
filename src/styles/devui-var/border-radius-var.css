@@ -1,0 +1,9 @@
+:root {
+	/* 一般圆角 */
+	--devui-border-radius: 4px;
+	/* 反馈类圆角 */
+	--devui-border-radius-feedback: 4px;
+	/* 卡片圆角 */
+	--devui-border-radius-card: 8px;
+	--devui-border-radius-full: 100px;
+}
