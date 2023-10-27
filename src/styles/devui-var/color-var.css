@@ -1,0 +1,202 @@
+:root {
+	/* 全局带底色背景 */
+	--devui-global-bg: #f6f6f8;
+	/* 毛玻璃样式背景色 */
+	--devui-glass-morphism-bg: rgba(245, 246, 248, 0.9);
+	/* 全局白色背景 */
+	--devui-global-bg-normal: #ffffff;
+	/* 基础区块背景白色 */
+	--devui-base-bg: #ffffff;
+	/* 基础区块背景深色(固定) */
+	--devui-base-bg-dark: #252b3a;
+	/* 大面积的不可折叠区块的背景色（例如顶部导航背景色） */
+	--devui-block: #ffffff;
+	/* 可折叠区块的背景色（展开区域颜色） */
+	--devui-area: #f5f5f5;
+	/* svg图标 背景色 */
+	--devui-icon-bg: #ffffff;
+	/* 表单控件背景色 */
+	--devui-form-control-bg: #ffffff;
+	/* 列表类型单选选中背景 */
+	--devui-list-item-active-bg: #e9edfa;
+	/* 列表类型单选选中背景悬停反馈色（仅用于分页等） */
+	--devui-list-item-active-hover-bg: #e9edfa;
+	/* 列表类型普通选项悬停背景 */
+	--devui-list-item-hover-bg: #f2f2f3;
+	/* 列表类型多选被选中的行色，仅用于表格类 */
+	--devui-list-item-selected-bg: #e9edfa;
+	/* 列表类型斑马纹色，仅用于表格类 */
+	--devui-list-item-strip-bg: #f2f5fc;
+	/* disabled背景颜色 */
+	--devui-disabled-bg: #f5f5f5;
+	/* 主要按钮disabled状态背景颜色 */
+	--devui-primary-disabled: #beccfa;
+	/* 默认标签化选项背景色 */
+	--devui-label-bg: #e9edfa;
+	/* 有连接点的弹出菜单层背景色 */
+	--devui-connected-overlay-bg: #ffffff;
+	/* 全屏类型的弹出内容层背景色（模态弹窗） */
+	--devui-fullscreen-overlay-bg: #ffffff;
+	/* 信息提示反馈类型的漂浮层背景色（toast、popover） */
+	--devui-feedback-overlay-bg: #464d6e;
+	/* 被嵌套的无边框搜索框背景色 */
+	--devui-embed-search-bg: #f2f2f3;
+	/* 被嵌套的无边框搜索框背景色 */
+	--devui-embed-search-bg-hover: #eef0f5;
+	/* 特殊浮层背景色（待修正） */
+	--devui-float-block-shadow: rgba(94, 124, 224, 0.3);
+	/* 局部半透明全局浮层背景色（比如底部） */
+	--devui-highlight-overlay: rgba(255, 255, 255, 0.8);
+	/* 范围内状态下的hover背景色（比如datepicker范围中间日期的hover） */
+	--devui-range-item-hover-bg: #e9edfa;
+	--devui-gray-form-control-bg: #f5f5f5;
+	--devui-gray-form-control-hover-bg: #ebebeb;
+	--devui-nav-expand-bg: #fbfbfc;
+	/* 失败底色 */
+	--devui-danger-bg: #ffd5d4;
+	/* 警告底色 */
+	--devui-warning-bg: #ffe1c7;
+	/* 通知底色 */
+	--devui-info-bg: #e9edfa;
+	/* 成功底色 */
+	--devui-success-bg: #cffcee;
+	/* 主要底色 */
+	--devui-primary-bg: #f2f5fc;
+	/* 默认底色 */
+	--devui-default-bg: #f7f8fa;
+	--devui-btn-common-bg: #ebebeb;
+	--devui-btn-common-bg-hover: #d1d1d1;
+	--devui-btn-common-bg-active: #bdbdbd;
+	--devui-icon-hover-bg: #ebebeb;
+	--devui-icon-active-bg: #d1d1d1;
+	/* 品牌色 */
+	---brand: #5e7ce0;
+	/* 品牌色辅助色、正衬色 */
+	--devui-brand-foil: #f2f2f3;
+	/* 品牌色高亮色（加亮） */
+	--devui-brand-hover: #7693f5;
+	/* 品牌色激活色（加深） */
+	--devui-brand-active: #526ecc;
+	/* 品牌色焦点色（重度加深） */
+	--devui-brand-active-focus: #344899;
+	/* 品牌色撞色、对比色、反衬色、第二品牌色 */
+	--devui-contrast: #c7000b;
+	/* 失败、错误、告警 */
+	--devui-danger: #f66f6a;
+	/* 警告、需注意类型提示 */
+	--devui-warning: #fac20a;
+	/* 等待中 */
+	--devui-waiting: #beccfa;
+	/* 成功、正确 */
+	--devui-success: #3ac295;
+	/* 通知、一般提示、执行中 */
+	--devui-info: #5e7ce0;
+	/* 初始化、未执行 */
+	--devui-initial: #e9edfa;
+	/* 不可用、禁用状态 */
+	--devui-unavailable: #f5f5f5;
+	/* 主要按钮，同品牌色 */
+	--devui-primary: #5e7ce0;
+	/* 主要按钮悬停 */
+	--devui-primary-hover: #7693f5;
+	/* 主要按钮激活 */
+	--devui-primary-active: #344899;
+	/* 突出按钮悬停 */
+	--devui-contrast-hover: #d64a52;
+	/* 突出按钮激活 */
+	--devui-contrast-active: #b12220;
+	/* 正文文本 */
+	--devui-text: #252b3a;
+	/* 弱化的正文信息（手风琴子项，表头） */
+	--devui-text-weak: #575d6c;
+	/* 辅助文本、帮助信息（面包屑） */
+	--devui-aide-text: #71757f;
+	/* 辅助文本悬浮色，用于标签文本悬浮等场景 */
+	--devui-aide-text-hover: #252b3a;
+	/* 辅助文本、帮助信息里的强调色 */
+	--devui-aide-text-stress: #575d6c;
+	/* 占位符 */
+	--devui-placeholder: #babbc0;
+	/* 有色深色背景下字体颜色（固定） */
+	--devui-light-text: #ffffff;
+	/* 有色浅色背景下字体颜色（固定） */
+	--devui-dark-text: #252b3a;
+	/* 链接文本颜色 */
+	--devui-link: #526ecc;
+	/* 链接文本悬停/激活颜色 */
+	--devui-link-active: #526ecc;
+	/* 深色背景下链接文本颜色 */
+	--devui-link-light: #96adfa;
+	/* 深色背景下链接文本悬停/激活颜色 */
+	--devui-link-light-active: #beccfa;
+	/* 文字图标颜色，同 正文颜色 */
+	--devui-icon-text: #71757f;
+	/* svg图标 灰色填充色 */
+	--devui-icon-fill: #71757f;
+	/* 弱化型图标填充色 */
+	--devui-icon-fill-weak: #babbc0;
+	/* svg图标 灰色填充色悬停反馈色 */
+	--devui-icon-fill-hover: #252b3a;
+	/* svg图标 高亮填充色（激活状态） */
+	--devui-icon-fill-active: #252b3a;
+	/* svg图标 高亮填充色悬停反馈色 */
+	--devui-icon-fill-active-hover: #252b3a;
+	/* 面型svg图标填充色	 */
+	--devui-shape-icon-fill: #d7d8da;
+	/* 面型svg图标悬停反馈色 */
+	--devui-shape-icon-fill-hover: #babbc0;
+	/* 面型svg图标高亮填充色（激活状态） */
+	--devui-shape-icon-fill-active: #babbc0;
+	/* 面型svg图标禁用色 */
+	--devui-shape-icon-fill-disabled: #f5f5f5;
+	/* 列表类型单选选中背景搭配文本，同 有色深色背景下字体颜色（固定） */
+	--devui-list-item-active-text: #252b3a;
+	/* 列表类型普通选项悬停背景搭配文本 */
+	--devui-list-item-hover-text: #252b3a;
+	/* disabled文字颜色 */
+	--devui-disabled-text: #babbc0;
+	/* svg图标激活状态禁用色 */
+	--devui-icon-fill-active-disabled: #beccfa;
+	/* 信息提示反馈类型的漂浮层背景色搭配文本色 */
+	--devui-feedback-overlay-text: #dfe1e6;
+	/* 边框分割线，仅用于边框 */
+	--devui-line: #d7d8da;
+	/* 内容分割线，用于内容之间的分割 */
+	--devui-dividing-line: #eef0f5;
+	/* 表单控件边框色，同 边框分割线 */
+	--devui-form-control-line: #d7d8da;
+	/* 表单控件边框悬停反馈色 */
+	--devui-form-control-line-hover: #9b9fa8;
+	/* 表单控件边框激活色，用于获得焦点 */
+	--devui-form-control-line-active: #5e7ce0;
+	--devui-form-control-interactive-outline: rgba(94, 124, 224, 0.08);
+	/* 表单控件边框激活色，用于获得焦点且悬停 */
+	--devui-form-control-line-active-hover: #344899;
+	/* disabled边框颜色	 */
+	--devui-disabled-line: #dfe1e6;
+	/* 有连接点的弹出菜单层边框色 */
+	--devui-connected-overlay-line: #526ecc;
+	/* 失败边框	 */
+	--devui-danger-line: #f66f6a;
+	/* 警告边框 */
+	--devui-warning-line: #fa9841;
+	/* 通知边框 */
+	--devui-info-line: #5e7ce0;
+	/* 成功边框 */
+	--devui-success-line: #50d4ab;
+	/* 主要边框	 */
+	--devui-primary-line: #5e7ce0;
+	/* 默认边框 */
+	--devui-default-line: #5e7ce0;
+	/* 阴影色 */
+	--devui-shadow: rgba(37, 43, 58, 0.24);
+	/* 弱化阴影色 */
+	--devui-light-shadow: rgba(37, 43, 58, 0.12);
+	/* 下拉菜单类阴影 */
+	--devui-connected-overlay-shadow: rgba(37, 43, 58, 0.16);
+	/* 信息提示类阴影 */
+	--devui-feedback-overlay-shadow: rgba(37, 43, 58, 0.2);
+	--devui-hover-shadow: rgba(37, 43, 58, 0.2);
+	--devui-btn-common-color-hover: #252b3a;
+	--devui-btn-common-color-active: #252b3a;
+}

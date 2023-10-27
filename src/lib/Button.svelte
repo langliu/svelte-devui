@@ -1,5 +1,8 @@
 <script lang="ts">
-	export let type = 'primary';
+	export const type: 'button' | 'submit' | 'reset' = 'button';
+	export const style: 'primary' | 'common' | 'text' | 'danger' = 'primary';
+	export const size: 'lg' | 'md' | 'sm' | 'xs' = 'md';
+	export const bordered: boolean = false;
 </script>
 
 <button>
