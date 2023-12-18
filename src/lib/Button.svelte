@@ -1,6 +1,6 @@
 <script>
 	/**
-	* @type {'button' | 'submit' | 'reset'}
+	 * @type {'button' | 'submit' | 'reset'}
 	 */
 	export let type = 'button';
 	/**
@@ -10,9 +10,9 @@
 	/**
 	 * @type {'lg' | 'md' | 'sm' | 'xs'}
 	 */
-	export const size  = 'md';
+	export const size = 'md';
 	/**
-	 * @type {boolean} [false]
+	 * @type {boolean}
 	 */
 	export let bordered = false;
 	/**
@@ -21,8 +21,15 @@
 	export let disabled = false;
 </script>
 
-<button {type} class="devui-btn devui-btn-{style} devui-btn-{size}" {disabled}>
-	<slot />
+<button
+	{type}
+	class="devui-btn devui-btn-{style} devui-btn-{size} devui-button-water-wave"
+	{disabled}
+	class:bordered
+	on:click
+	on:dblclick
+>
+	we
 </button>
 
 <style>
@@ -61,26 +68,13 @@
 		position: relative;
 		overflow: hidden;
 		transform: scale(1);
-		/*  @each var(--type in common, stress, primary, danger, left, right, xs, sm, lg, text, text-dark {*/
-		/*    &.devui-btn-#{var(--type} {*/
-		/*      @each var(--key, var(--value in map-get(var(--devui-btn-normal-config, var(--type) {*/
-		/*        #{var(--key}: var(--value;*/
-		/*      }*/
-		/*    }*/
-		/*  }*/
-		/*  @each var(--type in text, text-dark, common, stress, primary, danger {*/
-		/*    &.devui-btn-#{var(--type} {*/
-		/*      @each var(--pseudo, var(--value in map-get(var(--devui-btn-pseudo-config, var(--type) {*/
-		/*        &:#{var(--pseudo} {*/
-		/*          @each var(--key, var(--value2 in map-get(map-get(var(--devui-btn-pseudo-config, var(--type), var(--pseudo) {*/
-		/*            #{var(--key}: var(--value2;*/
-		/*          }*/
-		/*        }*/
-		/*      }*/
-		/*    }*/
-		/*  }*/
 
 		&.devui-btn-common {
+			color: var(--devui-text);
+			min-width: var(--devui-btn-min-width);
+			background-color: var(--devui-btn-common-bg, --devui-base-bg);
+			border-color: var(--devui-btn-common-border-color, --devui-line);
+
 			&:disabled {
 				color: var(--devui-disabled-text);
 				background: var(--devui-disabled-bg);
@@ -315,12 +309,12 @@
 		color: var(--devui-light-text);
 		min-width: var(--devui-btn-min-width);
 		background-color: var(--devui-primary);
-	}
 
-	.devui-btn-primary:disabled {
-		color: var(--devui-light-text);
-		background: var(--devui-primary-disabled);
-		border: none;
+		&:disabled {
+			color: var(--devui-light-text);
+			background: var(--devui-primary-disabled);
+			border: none;
+		}
 	}
 
 	@keyframes waterWave {

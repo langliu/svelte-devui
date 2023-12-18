@@ -7,3 +7,5 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 <Button size="md">212</Button>
 <Button size="md" disabled={true}>212</Button>
+
+<Button size="md" style="common">212</Button>
