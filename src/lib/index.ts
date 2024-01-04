@@ -1,6 +1,4 @@
-// Reexport your entry components here
-import Button from "./Button.svelte";
+import Button from './Button.svelte';
+import Status from './Status.svelte';
 
-export {
-    Button
-}
+export { Button, Status };
