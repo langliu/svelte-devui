@@ -91,6 +91,7 @@
 	}
 	.devui-badge-content {
 		position: absolute;
+		box-sizing: border-box;
 		&.devui-badge-content-count {
 			background: var(--devui-brand);
 			color: var(--devui-light-text);
