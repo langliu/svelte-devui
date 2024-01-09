@@ -84,7 +84,8 @@
 				if (/[_ -]/.test(name)) {
 					const str_before = name.split(/_|-|\s+/)[0];
 					const str_after = name.split(/_|-|\s+/)[1];
-					nameDisplay = str_before.substr(0, 1).toUpperCase() + str_after.substr(0, 1).toUpperCase();
+					nameDisplay =
+						str_before.substr(0, 1).toUpperCase() + str_after.substr(0, 1).toUpperCase();
 				} else {
 					// 一个英文名的情况显示前两个字母
 					nameDisplay = name.substr(0, 2).toUpperCase();
@@ -133,33 +134,35 @@
 		src={imgSrc}
 		alt=""
 		on:error={showErrorDisplay}
-		style:height={height+'px'}
-		style:width={width+'px'}
+		style:height={height + 'px'}
+		style:width={width + 'px'}
 		style:border-radius={isRound ? '100%' : 0}
 		style="vertical-align: middle;"
 	/>
-{:else if (!imgSrc && !isNobody && nameDisplay?.length !== 0)}
+{:else if !imgSrc && !isNobody && nameDisplay?.length !== 0}
 	<span
-		class={`devui-avatar-style devui-avatar-background-${code}`}
-		style:height={height+'px'}
-		style:width={width+'px'}
+		class={`devui-avatar-style`}
+		class:devui-avatar-background-0={code === 0}
+		class:devui-avatar-background-1={code === 1}
+		style:height={height + 'px'}
+		style:width={width + 'px'}
 		style:border-radius={isRound ? '100%' : 0}
 		style:font-size={fontSize}
-		style:line-height={height+'px'}
+		style:line-height={height + 'px'}
 	>
 		{nameDisplay}
 	</span>
-{:else if (!imgSrc && !isNobody && nameDisplay?.length === 0)}
+{:else if !imgSrc && !isNobody && nameDisplay?.length === 0}
 	<span class="devui-avatar-style" style:border-radius={isRound ? '10%' : 0}>
-		 <svg
-			 style:width={width + 'px'}
-			 style:height={height + 'px'}
-			 style:vertical-align="middle"
-			 viewBox="0 0 30 30"
-			 version="1.1"
-			 xmlns="http://www.w3.org/2000/svg"
-			 xmlns:xlink="http://www.w3.org/1999/xlink"
-		 >
+		<svg
+			style:width={width + 'px'}
+			style:height={height + 'px'}
+			style:vertical-align="middle"
+			viewBox="0 0 30 30"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+		>
 			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 				<circle fill="#CACFD8" cx="15" cy="15" r="15"></circle>
 				<path
@@ -171,16 +174,16 @@
 	</span>
 {:else if (!imgSrc && isNobody) || isErrorImg}
 	<span class="devui-avatar-style" style:border-radius={isRound ? '10%' : 0}>
-		 <svg
-			 style:width={width + 'px'}
-			 style:height={height + 'px'}
-			 style:vertical-align="middle"
-			 viewBox="0 0 30 30"
-			 version="1.1"
-			 xmlns="http://www.w3.org/2000/svg"
-			 xmlns:xlink="http://www.w3.org/1999/xlink"
-		 >
-				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<svg
+			style:width={width + 'px'}
+			style:height={height + 'px'}
+			style:vertical-align="middle"
+			viewBox="0 0 30 30"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+		>
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 				<path
 					d="M22.31,19.2474562 L22.31,21.9974562 L20.81,21.9974562 L20.81,19.2474562 L18.06,19.2474562 L18.06,17.7474562 L20.81,17.7474562 L20.81,14.9974562 L22.31,14.9974562 L22.31,17.7474562 L25.06,17.7474562 L25.06,19.2474562 L22.31,19.2474562 Z M14.9297866,14.9974562 C12.4445053,14.9974562 10.4297866,12.9827376 10.4297866,10.4974562 C10.4297866,8.01217483 12.4445053,5.9974562 14.9297866,5.9974562 C17.415068,5.9974562 19.4297866,8.01217483 19.4297866,10.4974562 C19.4297866,12.9827376 17.415068,14.9974562 14.9297866,14.9974562 Z M19.6797866,20.2474562 L19.6797866,21.9971623 L6.93,21.9960092 C6.93,18.0096715 10.8192296,15.4974562 14.9297866,15.4974562 C16.4608397,15.4974562 17.9612467,15.983021 19.2414296,16.7474562 L17.06,16.7474562 L17.06,20.2474562 L19.6797866,20.2474562 Z"
 					fill="#959EB2"
@@ -196,17 +199,17 @@
 {/if}
 
 <style>
-    .devui-avatar-style {
-        display: inline-block;
-        text-align: center;
-        color: var(--devui-light-text);
-    }
+	.devui-avatar-style {
+		display: inline-block;
+		text-align: center;
+		color: var(--devui-light-text);
+	}
 
-    .devui-avatar-background-0 {
-        background-color: #ff8b87;
-    }
+	.devui-avatar-background-0 {
+		background-color: #ff8b87;
+	}
 
-    .devui-avatar-background-1 {
-        background-color: #7693f5;
-    }
+	.devui-avatar-background-1 {
+		background-color: #7693f5;
+	}
 </style>
