@@ -21,7 +21,6 @@
 					<slot name="title" />
 				</div>
 			{/if}
-			<slot />
 			{#if $$slots.subtitle}
 				<div class="devui-card-subtitle">
 					<slot name="subtitle" />
@@ -67,7 +66,6 @@
 		& .devui-card-subtitle {
 			display: block;
 			font-size: var(--devui-font-size);
-			font-weight: bold;
 			color: var(--devui-aide-text-stress);
 		}
 
