@@ -1,10 +1,7 @@
 <script>
 	import { Alert } from '$lib';
-	import ExampleCard from '../ExampleCard.svelte';
+	import ExampleCard from '../../ExampleCard.svelte';
 </script>
-
-<h1>Alert 警告</h1>
-<p>显示警告信息，需要用户关注的信息的组件。</p>
 
 <ExampleCard title="基本用法" description="共有四种样式：success、danger、warning、info。">
 	<div style="width: 100%; display: flex; flex-direction: column; gap: 20px;">

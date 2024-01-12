@@ -28,7 +28,7 @@
 				},
 				{
 					name: 'Alert 警告',
-					path: '/components/alert'
+					path: '/components/alert/demo'
 				},
 				{
 					name: 'Card 卡片',
