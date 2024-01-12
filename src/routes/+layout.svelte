@@ -1,5 +1,5 @@
 <script>
-	import '../styles/devui-var/index.css';
+	import '$lib/styles/devui-var/index.css';
 	import Sidebar from './Sidebar.svelte';
 </script>
 
