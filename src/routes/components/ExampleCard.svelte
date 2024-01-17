@@ -1,4 +1,5 @@
 <script>
+	import { Code } from 'lucide-svelte';
 	/**
 	 * 卡片标题
 	 * @type {string}
@@ -9,6 +10,11 @@
 	 * @type {string}
 	 */
 	export let description = '';
+	let showCode = false;
+
+	function toggleCodeShow() {
+		showCode = !showCode;
+	}
 </script>
 
 <div class="card">
@@ -19,22 +25,35 @@
 	<div class="content">
 		<slot />
 	</div>
+	<div>
+		<button
+			class="code-icon"
+			style:transform={showCode ? 'rotate(90deg)' : ''}
+			on:click={toggleCodeShow}
+		>
+			<Code size={18} />
+		</button>
+		{#if showCode}
+			<slot name="code" />
+		{/if}
+	</div>
 </div>
 
 <style>
 	.card {
-		border: 1px solid var(--devui-dividing-line);
-		margin-bottom: 20px;
 		padding: 20px;
+		margin-bottom: 20px;
+		border: 1px solid var(--devui-dividing-line);
 		border-radius: 20px;
+
 		& h3 {
+			height: 24px;
 			margin-top: 0;
 			margin-bottom: 12px;
 			font-size: var(--devui-font-size-page-title, 16px);
 			font-weight: var(--devui-font-title-weight, bold);
 			line-height: var(--devui-line-height-base, 1.5);
 			color: var(--devui-text, #252b3a);
-			height: 24px;
 		}
 
 		& p {
@@ -46,11 +65,18 @@
 		}
 
 		& .content {
-			border-bottom: 1px dashed var(--devui-dividing-line);
-			padding: 16px 0;
 			display: flex;
-			align-items: center;
 			gap: 16px;
+			align-items: center;
+			padding: 16px 0;
+			border-bottom: 1px dashed var(--devui-dividing-line);
 		}
+	}
+	.code-icon {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		transition: transform 0.2s;
+		margin-top: 10px;
 	}
 </style>

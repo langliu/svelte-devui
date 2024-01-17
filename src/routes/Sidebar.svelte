@@ -15,6 +15,10 @@
 			path: '/components',
 			children: [
 				{
+					path: '/components/button/demo',
+					name: 'Button 按钮'
+				},
+				{
 					path: '/components/status',
 					name: 'Status 状态'
 				},
@@ -39,8 +43,8 @@
 	];
 </script>
 
-<aside>
-	<nav class="sidebar">
+<aside class="sidebar">
+	<nav>
 		<ul>
 			{#each sideMenuList as menu}
 				<li>
@@ -64,30 +68,33 @@
 
 <style>
 	.sidebar {
-		border-right-color: var(--devui-dividing-line);
-		border-right-width: 1px;
-		border-right-style: solid;
-		padding-right: 1rem;
-		padding-top: 2rem;
 		width: 250px;
+		padding-top: 2rem;
+		padding-right: 1rem;
+		border-right: 1px solid var(--devui-dividing-line);
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		top: 0;
+		overflow-y: auto;
 
 		& ul {
-			list-style-type: none;
-			margin: 0;
 			padding-inline-start: 1rem;
+			margin: 0;
+			list-style-type: none;
 
 			& a {
-				text-decoration: none;
 				color: var(--devui-text-weak);
+				text-decoration: none;
 			}
 		}
 
 		& .item {
-			padding-left: 1rem;
-			border-radius: 20px;
-			height: 40px;
-			line-height: 40px;
 			display: block;
+			height: 40px;
+			padding-left: 1rem;
+			line-height: 40px;
+			border-radius: 20px;
 
 			&:hover {
 				color: var(--devui-list-item-hover-text);
@@ -100,9 +107,9 @@
 		}
 
 		& .active {
+			font-weight: bold;
 			color: var(--devui-list-item-active-text);
 			background-color: var(--devui-list-item-active-bg);
-			font-weight: bold;
 		}
 	}
 </style>

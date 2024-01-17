@@ -43,30 +43,30 @@
 
 <style>
 	h1 {
+		padding: 32px 0 0;
 		margin-top: 0;
 		margin-bottom: 16px;
 		font-size: 36px;
 		line-height: 1;
-		padding: 32px 0 0 0;
 	}
 
 	.doc-header {
-		margin-bottom: 24px;
-		padding-top: 32px;
 		box-sizing: border-box;
-		color: var(--devui-aide-text);
-		font-size: var(--devui-font-size);
+		padding-top: 32px;
 		padding-right: 200px;
+		margin-bottom: 24px;
+		font-size: var(--devui-font-size);
+		color: var(--devui-aide-text);
 	}
 
 	.tabs {
+		position: relative;
 		display: flex;
 		align-items: flex-end;
-		border-radius: 16px;
 		height: 176px;
-		background-size: cover;
 		background-image: url('https://devui.design/components/assets/overview/banner/19.png');
-		position: relative;
+		background-size: cover;
+		border-radius: 16px;
 
 		& .component-icon {
 			position: absolute;
@@ -77,49 +77,51 @@
 			background-color: #fff3;
 			backdrop-filter: blur(20px);
 			border-radius: 20px;
+
 			& img {
 				width: 100%;
 				height: 100%;
 			}
 		}
 	}
+
 	.nav-container {
-		font-size: var(--devui-font-size-lg);
-		display: flex;
-		align-items: stretch;
-		flex-wrap: nowrap;
-		border-radius: 0 0 16px 16px;
-		background: rgba(242, 242, 243, 0.6);
-		backdrop-filter: blur(20px);
-		width: 100%;
 		position: sticky;
 		top: 0;
+		z-index: 99;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: stretch;
+		width: 100%;
 		margin-top: -56px;
 		margin-bottom: 20px;
-		z-index: 99;
+		font-size: var(--devui-font-size-lg);
+		background: rgb(242 242 243 / 60%);
+		backdrop-filter: blur(20px);
+		border-radius: 0 0 16px 16px;
 
 		& .nav-slider {
-			height: 56px;
-			line-height: 56px;
-			text-align: center;
-			font-size: 18px;
-			color: var(--devui-text);
 			z-index: 2;
-			cursor: pointer;
 			flex: 100;
+			height: 56px;
+			font-size: 18px;
+			line-height: 56px;
+			color: var(--devui-text);
+			text-align: center;
 			text-decoration: none;
+			cursor: pointer;
 			background: transparent;
 		}
 
 		& .nav-slider-animation {
+			position: absolute;
+			top: 0;
+			width: 50%;
 			height: 56px;
 			line-height: 56px;
-			top: 0;
+			background-color: var(--devui-base-bg);
 			border-radius: 0 0 16px 16px;
 			box-shadow: 2px 2px 16px #0d275029;
-			position: absolute;
-			background-color: var(--devui-base-bg);
-			width: 50%;
 			transition:
 				left 0.3s cubic-bezier(0.5, 0.05, 0.5, 0.95),
 				width 0.3s cubic-bezier(0.5, 0.05, 0.5, 0.95);

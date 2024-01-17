@@ -19,5 +19,15 @@
 	.content {
 		flex: 1;
 		padding-left: 2rem;
+		margin-left: 250px;
+	}
+
+	:global(pre) {
+		font-size: 16px;
+		line-height: 1.4;
+	}
+	:global(html, body) {
+		margin: 0;
+		padding: 0;
 	}
 </style>
