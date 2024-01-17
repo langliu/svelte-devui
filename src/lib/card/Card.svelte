@@ -43,21 +43,25 @@
 		padding: 16px 20px;
 		border-radius: var(--devui-border-radius-card);
 		box-shadow: var(--devui-shadow-length-base) var(--devui-light-shadow);
+
 		&.interactive {
 			cursor: pointer;
 			transition: transform var(--devui-animation-duration-slow)
 				var(--devui-animation-ease-in-out-smooth) box-shadow var(--devui-animation-duration-slow)
 				var(--devui-animation-ease-in-out-smooth);
+
 			&:hover {
 				box-shadow: var(--devui-shadow-length-hover) var(--devui-hover-shadow);
 				transform: translateY(-5px);
 			}
 		}
+
 		& .devui-card-title {
 			display: block;
 			font-size: var(--devui-font-size-card-title);
 			font-weight: bold;
 			color: var(--devui-text);
+
 			& + .devui-card-subtitle {
 				margin-top: var(--card-ele-space, 8px);
 			}
@@ -89,6 +93,7 @@
 			width: calc(100% - 40px);
 			height: auto;
 			margin: 0 -20px var(--card-block-space, 16px) -20px;
+
 			&:first-child {
 				margin-top: calc(0px - var(--card-block-space, 16px));
 			}

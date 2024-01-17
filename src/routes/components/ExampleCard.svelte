@@ -1,4 +1,5 @@
 <script>
+	import { fly, slide } from 'svelte/transition';
 	import { Code } from 'lucide-svelte';
 	/**
 	 * 卡片标题
@@ -34,7 +35,9 @@
 			<Code size={18} />
 		</button>
 		{#if showCode}
-			<slot name="code" />
+			<div transition:fly={{ y: -50 }}>
+				<slot name="code" />
+			</div>
 		{/if}
 	</div>
 </div>

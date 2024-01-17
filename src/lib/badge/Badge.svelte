@@ -89,94 +89,113 @@
 		display: inline-block;
 		line-height: 1;
 	}
+
 	.devui-badge-content {
 		position: absolute;
 		box-sizing: border-box;
+
 		&.devui-badge-content-count {
-			background: var(--devui-brand);
-			color: var(--devui-light-text);
 			min-width: 16px;
 			height: 16px;
+			padding: 0 4px;
 			font-size: var(--devui-font-size-sm);
 			line-height: 16px;
+			color: var(--devui-light-text);
 			text-align: center;
-			padding: 0 4px;
+			background: var(--devui-brand);
 			border-radius: var(--devui-border-radius-full);
 		}
+
 		&.devui-badge-content-dot {
 			width: 6px;
 			height: 6px;
-			border-radius: 100%;
 			background: var(--devui-danger);
+			border-radius: 100%;
 		}
+
 		&.devui-badge-content-top-left {
 			top: 0;
 			left: 0;
 			transform: translate(-50%, -50%);
 		}
+
 		&.devui-badge-content-top-right {
 			top: 0;
 			right: 0;
 			transform: translate(50%, -50%);
 		}
+
 		&.devui-badge-content-bottom-left {
 			bottom: 0;
 			left: 0;
 			transform: translate(-50%, 50%);
 		}
+
 		&.devui-badge-content-bottom-right {
-			bottom: 0;
 			right: 0;
+			bottom: 0;
 			transform: translate(50%, 50%);
 		}
+
 		&.devui-badge-content-danger {
 			background: var(--devui-danger);
 		}
+
 		&.devui-badge-content-warning {
 			background: var(--devui-warning);
 		}
+
 		&.devui-badge-content-waiting {
 			background: var(--devui-waiting);
 		}
+
 		&.devui-badge-content-success {
 			background: var(--devui-success);
 		}
+
 		&.devui-badge-content-info {
 			background: var(--devui-info);
 		}
+
 		&.devui-badge-content-common {
-			background: var(--devui-unavailable);
 			color: var(--devui-aide-text);
+			background: var(--devui-unavailable);
 		}
 	}
 
 	.devui-badge-status {
-		line-height: inherit;
-		vertical-align: baseline;
 		position: relative;
-		display: inline-block;
 		top: -1px;
+		display: inline-block;
 		width: 6px;
 		height: 6px;
+		line-height: inherit;
+		vertical-align: baseline;
 		border-radius: 100%;
+
 		&.devui-badge-content-danger {
 			background: var(--devui-danger);
 		}
+
 		&.devui-badge-content-warning {
 			background: var(--devui-warning);
 		}
+
 		&.devui-badge-content-waiting {
 			background: var(--devui-waiting);
 		}
+
 		&.devui-badge-content-success {
 			background: var(--devui-success);
 		}
+
 		&.devui-badge-content-info {
 			background: var(--devui-info);
 		}
+
 		&.devui-badge-content-common {
-			background: var(--devui-unavailable);
 			color: var(--devui-aide-text);
+			background: var(--devui-unavailable);
 		}
 	}
 </style>

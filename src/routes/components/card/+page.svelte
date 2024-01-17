@@ -46,15 +46,16 @@
 	:global(.card-container) {
 		width: 350px;
 	}
+
 	.card-block {
-		margin-right: 16px;
 		display: flex;
-		align-items: center;
 		gap: 8px;
+		align-items: center;
+		margin-right: 16px;
 	}
 
 	.card-icon {
-		cursor: pointer;
 		vertical-align: middle;
+		cursor: pointer;
 	}
 </style>

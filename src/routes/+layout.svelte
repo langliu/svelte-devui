@@ -1,5 +1,7 @@
 <script>
 	import '$lib/styles/devui-var/index.css';
+	// Supports weights 100-800
+	import '@fontsource-variable/jetbrains-mono';
 	import Sidebar from './Sidebar.svelte';
 </script>
 
@@ -24,7 +26,12 @@
 
 	:global(pre) {
 		font-size: 16px;
-		line-height: 1.4;
+		line-height: 1.5;
+		padding: 1rem;
+		border-radius: 0.5em;
+	}
+	:global(code) {
+		font-family: 'JetBrains Mono Variable', sans-serif;
 	}
 	:global(html, body) {
 		margin: 0;

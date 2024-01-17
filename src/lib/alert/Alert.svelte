@@ -191,22 +191,22 @@
 
 <style>
 	.devui-alert {
-		color: var(--devui-text);
-		font-size: var(--devui-font-size);
-		border: 1px solid transparent;
-		padding: 8px 16px;
-		line-height: 24px;
-		border-radius: var(--devui-border-radius);
-		word-break: normal;
-		word-wrap: break-word;
 		display: flex;
 		flex-wrap: nowrap;
 		align-items: center;
+		padding: 8px 16px;
+		font-size: var(--devui-font-size);
+		line-height: 24px;
+		color: var(--devui-text);
+		word-break: normal;
+		word-wrap: break-word;
+		border: 1px solid transparent;
+		border-radius: var(--devui-border-radius);
 
 		&.devui-alert-success {
+			color: var(--devui-text);
 			background-color: var(--devui-success-bg);
 			border-color: var(--devui-success-line);
-			color: var(--devui-text);
 
 			& .devui-close {
 				& > svg path {
@@ -216,9 +216,9 @@
 		}
 
 		&.devui-alert-info {
+			color: var(--devui-text);
 			background-color: var(--devui-info-bg);
 			border-color: var(--devui-info-line);
-			color: var(--devui-text);
 
 			& .devui-close {
 				& > svg path {
@@ -228,9 +228,9 @@
 		}
 
 		&.devui-alert-warning {
+			color: var(--devui-text);
 			background-color: var(--devui-warning-bg);
 			border-color: var(--devui-warning-line);
-			color: var(--devui-text);
 
 			& .devui-close {
 				& > svg path {
@@ -240,9 +240,9 @@
 		}
 
 		&.devui-alert-danger {
+			color: var(--devui-text);
 			background-color: var(--devui-danger-bg);
 			border-color: var(--devui-danger-line);
-			color: var(--devui-text);
 
 			& .devui-close {
 				& > svg path {
@@ -252,8 +252,8 @@
 		}
 
 		&.devui-alert-simple {
-			border-color: var(--devui-line);
 			color: var(--devui-text);
+			border-color: var(--devui-line);
 
 			& .devui-close {
 				& > svg path {
@@ -333,37 +333,37 @@
 
 			& .devui-alert-carousel-box {
 				position: relative;
-				left: 0;
 				top: 0;
+				left: 0;
 			}
 		}
 
 		& .devui-alert-operation-container {
+			display: flex;
 			flex-grow: 0;
 			flex-shrink: 1;
-			display: flex;
 			align-items: center;
 			justify-content: flex-end;
-			height: 24px;
 			min-width: 200px;
+			height: 24px;
 
 			& .devui-alert-carousel-num {
 				padding-right: 8px;
 			}
 
 			& .devui-alert-carousel-button {
-				margin-left: 8px;
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
 				width: 24px;
 				height: 16px;
+				margin-left: 8px;
 				line-height: 16px;
-				vertical-align: middle;
-				background-color: transparent;
 				text-align: center;
-				border-radius: var(--devui-border-radius);
+				vertical-align: middle;
 				cursor: pointer;
+				background-color: transparent;
+				border-radius: var(--devui-border-radius);
 
 				& svg path {
 					fill: var(--devui-text);
@@ -382,20 +382,20 @@
 		& .devui-close {
 			flex-grow: 0;
 			flex-shrink: 1;
-			color: var(--devui-text);
-			opacity: 1;
-			line-height: 26px;
 			height: 24px;
 			padding-left: 8px;
+			line-height: 26px;
+			color: var(--devui-text);
+			opacity: 1;
 
 			& > svg path {
 				fill: var(--devui-light-text);
 			}
 
 			& span {
-				color: var(--devui-text);
 				font-size: var(--devui-font-size);
 				font-weight: bold;
+				color: var(--devui-text);
 			}
 		}
 	}

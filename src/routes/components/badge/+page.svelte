@@ -22,19 +22,19 @@
 
 <style>
 	.demo-card {
+		display: inline-block;
 		width: 90px;
 		height: 42px;
-		line-height: 42px;
-		border-radius: var(--devui-border-radius-card);
-		background: var(--devui-global-bg);
 		font-size: var(--devui-font-size-card-title);
+		line-height: 42px;
 		text-align: center;
-		display: inline-block;
+		background: var(--devui-global-bg);
+		border-radius: var(--devui-border-radius-card);
 	}
 
 	.title {
-		font-size: var(--devui-font-size-card-title);
 		margin-bottom: 8px;
+		font-size: var(--devui-font-size-card-title);
 		font-weight: bold;
 	}
 </style>

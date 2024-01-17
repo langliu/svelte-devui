@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/jetbrains-mono':
+    specifier: ^5.0.19
+    version: 5.0.19
   svelte:
     specifier: ^4.2.8
     version: 4.2.8
@@ -88,6 +91,9 @@ devDependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  shikiji:
+    specifier: 0.10.0-beta.4
+    version: 0.10.0-beta.4
   storybook:
     specifier: 7.6.7
     version: 7.6.7
@@ -1945,6 +1951,10 @@ packages:
   /@floating-ui/utils@0.1.6:
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
     dev: true
+
+  /@fontsource-variable/jetbrains-mono@5.0.19:
+    resolution: {integrity: sha512-7PTG1Kp3B/FgoNVPT8da4humj5JxQYxTtO08ZPS2IfanS37Yb/WShbgScnG/iupuFwiRnHVkIuC/2czxItxmyg==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
@@ -8546,6 +8556,16 @@ packages:
   /shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+    dev: true
+
+  /shikiji-core@0.10.0-beta.4:
+    resolution: {integrity: sha512-TqLiUIlCHCBGuLwUg+4O74OLZD8ftiAA+SKhD2SwyAj4xnczGAipsIInZLbocjFNeAFUWjYKUKZPQTVCAhD60w==}
+    dev: true
+
+  /shikiji@0.10.0-beta.4:
+    resolution: {integrity: sha512-Jj0BjAGAv/cZKiAwLJQCX610rtSqptFihGItTQtLTj8FagNcpfl7a6SLKoRZDwRxjg97V0dd7sH5NVs+6ZV4CQ==}
+    dependencies:
+      shikiji-core: 0.10.0-beta.4
     dev: true
 
   /side-channel@1.0.4:

@@ -201,8 +201,8 @@
 <style>
 	.devui-avatar-style {
 		display: inline-block;
-		text-align: center;
 		color: var(--devui-light-text);
+		text-align: center;
 	}
 
 	.devui-avatar-background-0 {

@@ -12,9 +12,9 @@
 
 <style>
 	.devui-card-actions {
-		margin-top: var(--card-block-space, 16px);
 		display: flex;
 		align-items: center;
+		margin-top: var(--card-block-space, 16px);
 	}
 
 	.devui-card-actions-align-start {
