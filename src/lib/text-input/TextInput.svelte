@@ -1,6 +1,12 @@
 <script lang="ts">
   export let placeholder: string | undefined = undefined;
+  /**
+   * 输入框类型
+   */
   export let type: 'text' | 'password' = 'text';
+  /**
+   * 是否禁用输入
+   */
   export let disabled: boolean = false;
   /**
    * 文本框是否出现输入错误
@@ -77,7 +83,6 @@
     vertical-align: middle;
     background-color: var(--devui-form-control-bg, #fff);
     border: 1px solid var(--devui-form-control-line, #d7d8da);
-    border-radius: var(--devui-border-radius, 2px);
     border-radius: var(--devui-border-radius);
     outline: none;
     box-shadow: 0 0 0 0 var(--devui-form-control-interactive-outline);

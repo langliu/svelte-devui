@@ -3,11 +3,11 @@
 </script>
 
 <h4>Small</h4>
-<TextInput placeholder="Please Enter" type="sm" />
+<TextInput placeholder="Please Enter" size="sm" />
 <h4>Middle</h4>
 <TextInput placeholder="Please Enter" />
 <h4>Large</h4>
-<TextInput placeholder="Please Enter" type="lg" />
+<TextInput placeholder="Please Enter" size="lg" />
 
 <style>
   h4 {
