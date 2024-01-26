@@ -37,6 +37,10 @@
         {
           name: 'Card 卡片',
           path: '/components/card'
+        },
+        {
+          name: 'TextInput 文本框',
+          path: '/components/text-input/demo'
         }
       ]
     }
