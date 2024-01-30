@@ -47,7 +47,7 @@
     on:blur
   />
   {#if type === 'password'}
-    <span class="devui-form-item-suffix" on:click={toggleShowPassword}>
+    <button class="devui-form-item-suffix" on:click={toggleShowPassword}>
       {#if showPassword}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@
           <line x1="2" x2="22" y1="2" y2="22" />
         </svg>
       {/if}
-    </span>
+    </button>
   {/if}
 </div>
 
@@ -137,6 +137,8 @@
     text-align: center;
     pointer-events: auto;
     visibility: visible;
+    background: transparent;
+    border: none;
     transform: translateY(-50%);
 
     & svg {
