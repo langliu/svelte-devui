@@ -72,15 +72,15 @@
 
 <style>
   .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
     width: 250px;
     padding-top: 2rem;
     padding-right: 1rem;
-    border-right: 1px solid var(--devui-dividing-line);
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    top: 0;
     overflow-y: auto;
+    border-right: 1px solid var(--devui-dividing-line);
 
     & ul {
       padding-inline-start: 1rem;

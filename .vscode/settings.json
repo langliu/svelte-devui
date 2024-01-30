@@ -2,5 +2,19 @@
     "cSpell.words": [
         "devui"
     ],
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "stylelint.validate": [
+        "css",
+        "svelte"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": "explicit"
+    },
+    "svelte.plugin.svelte.defaultScriptLanguage": "ts",
+    "svelte.plugin.svelte.format.config.printWidth": 100,
+    "svelte.plugin.svelte.format.config.singleQuote": true,
+    "svelte.plugin.svelte.format.config.svelteStrictMode": true
 }
