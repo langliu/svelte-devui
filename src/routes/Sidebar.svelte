@@ -41,6 +41,10 @@
         {
           name: 'TextInput 文本框',
           path: '/components/text-input/demo'
+        },
+        {
+          name: 'Search 搜索框',
+          path: '/components/search/demo'
         }
       ]
     }

@@ -1,0 +1,25 @@
+<script lang="ts">
+  import { Search } from 'svelte-devui';
+</script>
+
+<div>
+  <h5 class="text-muted">Small</h5>
+  <Search size="sm" class="search" placeholder="请输入关键字" iconPosition="left" />
+  <h5 class="text-muted">Middle</h5>
+  <Search isKeyupSearch={true} placeholder="请输入关键字" iconPosition="left" />
+  <h5 class="text-muted">Large</h5>
+  <Search size="lg" placeholder="请输入关键字" iconPosition="left" />
+</div>
+
+<style>
+  h5 {
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #575d6c;
+  }
+
+  .search {
+    width: 200px;
+  }
+</style>

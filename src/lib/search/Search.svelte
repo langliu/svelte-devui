@@ -35,7 +35,10 @@
    * 是否显示边框
    */
   export let noBorder: boolean = false;
-  export let cssClass: string = '';
+  let cssClass: string = '';
+  export let isKeyupSearch: boolean = false;
+
+  export { cssClass as class };
 
   function handleSearch() {}
 </script>
@@ -54,17 +57,18 @@
     on:change
     on:click
     on:blur
+    maxlength={maxLength}
   />
   <button
     class="devui-form-item-suffix"
     on:click={handleSearch}
-    style:left={iconPosition === 'left' ? 0 : ''}
-    style:right={iconPosition === 'right' ? 0 : ''}
+    class:icon-left={iconPosition === 'left'}
+    class:icon-right={iconPosition === 'right'}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -81,6 +85,12 @@
 <style>
   div:has(input) {
     position: relative;
+  }
+
+  div:has(.icon-left) {
+    & input {
+      padding-left: 32px;
+    }
   }
 
   .devui-glow-style {
@@ -102,11 +112,35 @@
   }
 
   .devui-text-input-sm {
+    height: 26px;
     font-size: var(--devui-font-size-sm);
+
+    & + button {
+      & svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
   }
 
   .devui-text-input-lg {
+    height: 46px;
     font-size: var(--devui-font-size-lg);
+
+    & + button {
+      & svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .icon-left {
+    left: 8px;
+  }
+
+  .icon-right {
+    right: 0;
   }
 
   .error {
@@ -117,7 +151,6 @@
   .devui-form-item-suffix {
     position: absolute;
     top: 50%;
-    right: 0;
     z-index: 1;
     box-sizing: border-box;
     display: flex;
@@ -125,6 +158,7 @@
     justify-content: center;
     width: 32px;
     height: 16px;
+    padding-inline-start: 0;
     text-align: center;
     pointer-events: auto;
     visibility: visible;

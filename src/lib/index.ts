@@ -6,3 +6,4 @@ export * from '$lib/card';
 export * from '$lib/status';
 export * from '$lib/toggle';
 export * from '$lib/text-input';
+export * from '$lib/search';
