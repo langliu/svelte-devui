@@ -1,6 +1,6 @@
 {
   "name": "svelte-devui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "vite dev --host",
     "build": "vite build && npm run package",
@@ -14,9 +14,7 @@
     "format": "prettier --plugin-search-dir . --write .",
     "format:style": "stylelint \"src/**/*.{css,svelte}\"",
     "test:integration": "playwright test",
-    "test:unit": "vitest",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test:unit": "vitest"
   },
   "exports": {
     ".": {
@@ -34,14 +32,6 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.41.1",
-    "@storybook/addon-essentials": "7.6.10",
-    "@storybook/addon-interactions": "7.6.10",
-    "@storybook/addon-links": "7.6.10",
-    "@storybook/addon-svelte-csf": "^4.1.0",
-    "@storybook/blocks": "7.6.10",
-    "@storybook/svelte": "7.6.10",
-    "@storybook/sveltekit": "7.6.10",
-    "@storybook/test": "7.6.10",
     "@sveltejs/adapter-auto": "^3.1.1",
     "@sveltejs/kit": "^2.4.3",
     "@sveltejs/package": "^2.2.6",

@@ -43,9 +43,8 @@
   function handleSearch() {}
 </script>
 
-<div>
+<div class={cssClass}>
   <input
-    class={cssClass}
     class:devui-glow-style={showGlowStyle}
     class:devui-gray-style={styleType === 'gray'}
     class:error
@@ -87,6 +86,31 @@
     position: relative;
   }
 
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 32px;
+    padding: 4px 8px;
+    font-size: var(--devui-font-size);
+    color: var(--devui-text, #252b3a);
+    vertical-align: middle;
+    background-color: var(--devui-form-control-bg, #fff);
+    border: 1px solid var(--devui-form-control-line, #d7d8da);
+    border-radius: var(--devui-border-radius);
+    outline: none;
+    box-shadow: 0 0 0 0 var(--devui-form-control-interactive-outline);
+    transition:
+      border-color 0.3s var(--devui-animation-ease-in-out-smooth),
+      box-shadow var(--devui-animation-duration-base) var(--devui-animation-ease-in);
+
+    &:disabled {
+      color: var(--devui-disabled-text);
+      cursor: not-allowed;
+      background-color: var(--devui-disabled-bg);
+      border-color: var(--devui-disabled-line);
+    }
+  }
+
   div:has(.icon-left) {
     & input {
       padding-left: 32px;
@@ -108,6 +132,29 @@
         background-color: var(--devui-gray-form-control-bg);
         border-color: var(--devui-gray-form-control-bg);
       }
+    }
+  }
+
+  .devui-form-item-suffix {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 16px;
+    padding-inline-start: 0;
+    text-align: center;
+    pointer-events: auto;
+    visibility: visible;
+    background: transparent;
+    border: none;
+    transform: translateY(-50%);
+
+    & svg {
+      cursor: pointer;
     }
   }
 
@@ -146,55 +193,6 @@
   .error {
     background-color: var(--devui-danger-bg);
     border-color: var(--devui-danger-line);
-  }
-
-  .devui-form-item-suffix {
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 16px;
-    padding-inline-start: 0;
-    text-align: center;
-    pointer-events: auto;
-    visibility: visible;
-    background: transparent;
-    border: none;
-    transform: translateY(-50%);
-
-    & svg {
-      cursor: pointer;
-    }
-  }
-
-  input {
-    box-sizing: border-box;
-    width: 100%;
-    height: 32px;
-    padding: 4px 8px;
-    margin: 10px 0;
-    font-size: var(--devui-font-size);
-    color: var(--devui-text, #252b3a);
-    vertical-align: middle;
-    background-color: var(--devui-form-control-bg, #fff);
-    border: 1px solid var(--devui-form-control-line, #d7d8da);
-    border-radius: var(--devui-border-radius);
-    outline: none;
-    box-shadow: 0 0 0 0 var(--devui-form-control-interactive-outline);
-    transition:
-      border-color 0.3s var(--devui-animation-ease-in-out-smooth),
-      box-shadow var(--devui-animation-duration-base) var(--devui-animation-ease-in);
-
-    &:disabled {
-      color: var(--devui-disabled-text);
-      cursor: not-allowed;
-      background-color: var(--devui-disabled-bg);
-      border-color: var(--devui-disabled-line);
-    }
   }
 
   .no-border {

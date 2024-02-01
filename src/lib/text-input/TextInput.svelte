@@ -24,6 +24,8 @@
    * default为默认有线框白底风格，gray为无线框灰底风格
    */
   export let styleType: 'default' | 'gray' = 'default';
+  export let value: string | undefined = undefined;
+
   let showPassword = false;
   $: lastType = type === 'text' ? type : !showPassword ? 'password' : 'text';
 
@@ -34,13 +36,14 @@
 
 <div>
   <input
+    bind:value
     class:devui-glow-style={showGlowStyle}
     class:devui-gray-style={styleType === 'gray'}
     class:error
     class:devui-text-input-sm={size === 'sm'}
     class:devui-text-input-lg={size === 'lg'}
     {placeholder}
-    type={lastType}
+    {...{ type: lastType }}
     {disabled}
     on:change
     on:click

@@ -3,5 +3,15 @@
     "stylelint-config-standard",
     "stylelint-config-recess-order"
   ],
-  "customSyntax": "postcss-html"
+  "customSyntax": "postcss-html",
+  "rules": {
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global"
+        ]
+      }
+    ]
+  }
 }
