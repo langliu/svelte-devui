@@ -16,5 +16,6 @@
     "svelte.plugin.svelte.defaultScriptLanguage": "ts",
     "svelte.plugin.svelte.format.config.printWidth": 100,
     "svelte.plugin.svelte.format.config.singleQuote": true,
-    "svelte.plugin.svelte.format.config.svelteStrictMode": true
+    "svelte.plugin.svelte.format.config.svelteStrictMode": true,
+    "prettier.printWidth": 100
 }

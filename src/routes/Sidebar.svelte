@@ -45,6 +45,10 @@
         {
           name: 'Search 搜索框',
           path: '/components/search/demo'
+        },
+        {
+          name: 'Radio 单选框',
+          path: '/components/radio/demo'
         }
       ]
     }
