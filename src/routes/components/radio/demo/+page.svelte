@@ -1,14 +1,14 @@
 <script>
   import ExampleCard from '$components/ExampleCard.svelte';
   import CodeBlock from '$components/CodeBlock.svelte';
-  import BaseAvatar from '$snippets/avatar/BaseAvatar.svelte';
   import BaseOptionAvatar from '$snippets/avatar/BaseOptionAvatar.svelte';
   import SpecialAvatar from '$snippets/avatar/SpecialAvatar.svelte';
+  import BasicUsageRadio from '$snippets/radio/BasicUsageRadio.svelte';
 </script>
 
 <ExampleCard title="互相独立的单选项">
-  <BaseAvatar />
-  <CodeBlock snippet="avatar/BaseAvatar.svelte" slot="code" />
+  <BasicUsageRadio />
+  <CodeBlock snippet="radio/BasicUsageRadio.svelte" slot="code" />
 </ExampleCard>
 
 <ExampleCard

@@ -7,11 +7,12 @@
   export let disabled: boolean = false;
   /** 是否显示悬浮发光效果 */
   export let showGlowStyle: boolean = true;
+  export let group: string | undefined = undefined;
 </script>
 
 <div class:devui-glow-style={showGlowStyle}>
   <label class="devui-radio">
-    <input type="radio" class="devui-radio-input" {name} bind:value {disabled} />
+    <input type="radio" class="devui-radio-input" {name} {value} {disabled} bind:group />
     <span class="devui-radio-material" />
     <span class="devui-radio-label">
       <slot />
@@ -23,6 +24,8 @@
   .devui-glow-style {
     & .devui-radio {
       box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
       margin: 0 auto;
       font-size: var(--devui-font-size);
       font-weight: 400;
@@ -31,6 +34,7 @@
       cursor: pointer;
 
       & .devui-radio-material {
+        box-sizing: border-box;
         display: inline-block;
         width: 16px;
         height: 16px;
@@ -38,15 +42,23 @@
         vertical-align: middle;
         user-select: none;
         border: solid 1px var(--devui-shape-icon-fill, #d7d8da);
+        border-radius: var(--devui-border-radius-full, 100px);
         transition: box-shadow var(--devui-animation-duration-slow)
           var(--devui-animation-ease-in-out-smooth);
         transform: translateY(-1px);
       }
 
-      &:not(.disable) {
+      &:not(.disable):hover {
         & .devui-radio-material {
           border-color: var(--devui-brand, #5e7ce0);
           box-shadow: 0 0 0 6px var(--devui-range-item-hover-bg, #e9edfa);
+        }
+      }
+
+      &:has(input[type='radio']:checked) {
+        & .devui-radio-material {
+          border-color: var(--devui-brand, #5e7ce0);
+          border-width: 4px;
         }
       }
     }
