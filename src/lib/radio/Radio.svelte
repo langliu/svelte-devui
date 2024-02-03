@@ -11,7 +11,7 @@
 </script>
 
 <div class:devui-glow-style={showGlowStyle}>
-  <label class="devui-radio">
+  <label class="devui-radio" class:disabled>
     <input type="radio" class="devui-radio-input" {name} {value} {disabled} bind:group />
     <span class="devui-radio-material" />
     <span class="devui-radio-label">
@@ -48,7 +48,22 @@
         transform: translateY(-1px);
       }
 
-      &:not(.disable):hover {
+      & .devui-radio-input {
+        display: none;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      & .devui-radio-label {
+        margin-left: 8px;
+        font-size: var(--devui-font-size, 12px);
+        color: var(--devui-text, #252b3a);
+      }
+
+      &:hover {
         & .devui-radio-material {
           border-color: var(--devui-brand, #5e7ce0);
           box-shadow: 0 0 0 6px var(--devui-range-item-hover-bg, #e9edfa);
@@ -62,20 +77,25 @@
         }
       }
     }
-  }
 
-  .devui-radio-input {
-    display: none;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    pointer-events: none;
-    opacity: 0;
-  }
+    & .disabled {
+      cursor: not-allowed;
 
-  .devui-radio-label {
-    margin-left: 8px;
-    font-size: var(--devui-font-size, 12px);
-    color: var(--devui-text, #252b3a);
+      & .devui-radio-material {
+        background-color: var(--devui-shape-icon-fill-disabled, #f5f5f5);
+        border-color: var(--devui-icon-fill-active-disabled, #beccfa);
+      }
+
+      & .devui-radio-label {
+        color: var(--devui-disabled-text, #babbc0);
+      }
+
+      &:has(input[type='radio']:checked) {
+        & .devui-radio-material {
+          border-color: var(--devui-icon-fill-active-disabled, #beccfa) !important;
+          border-width: 4px;
+        }
+      }
+    }
   }
 </style>
