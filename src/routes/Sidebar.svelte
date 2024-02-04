@@ -12,7 +12,6 @@
     },
     {
       name: '组件',
-      path: '/components',
       children: [
         {
           path: '/components/button/demo',
@@ -61,14 +60,18 @@
       {#each sideMenuList as menu}
         <li>
           <div class="item" class:active={$page.url.pathname === menu.path}>
-            <a href={menu.path}>{menu.name}</a>
+            {#if menu?.path}
+              <a href={menu.path}>{menu.name}</a>
+            {:else }
+              <span>{menu.name}</span>
+            {/if}
           </div>
         </li>
         {#if menu?.children}
           <ul>
             {#each menu.children as second (second.path)}
               <a href={second.path} class="item" class:active={$page.url.pathname === second.path}
-                >{second.name}</a
+              >{second.name}</a
               >
             {/each}
           </ul>
@@ -79,49 +82,49 @@
 </aside>
 
 <style>
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 250px;
-    padding-top: 2rem;
-    padding-right: 1rem;
-    overflow-y: auto;
-    border-right: 1px solid var(--devui-dividing-line);
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 250px;
+        padding-top: 2rem;
+        padding-right: 1rem;
+        overflow-y: auto;
+        border-right: 1px solid var(--devui-dividing-line);
 
-    & ul {
-      padding-inline-start: 1rem;
-      margin: 0;
-      list-style-type: none;
+        & ul {
+            padding-inline-start: 1rem;
+            margin: 0;
+            list-style-type: none;
 
-      & a {
-        color: var(--devui-text-weak);
-        text-decoration: none;
-      }
+            & a {
+                color: var(--devui-text-weak);
+                text-decoration: none;
+            }
+        }
+
+        & .item {
+            display: block;
+            height: 40px;
+            padding-left: 1rem;
+            line-height: 40px;
+            border-radius: 20px;
+
+            &:hover {
+                color: var(--devui-list-item-hover-text);
+                background-color: var(--devui-list-item-hover-bg);
+            }
+
+            &:not(:first-child) {
+                margin-top: 8px;
+            }
+        }
+
+        & .active {
+            font-weight: bold;
+            color: var(--devui-list-item-active-text);
+            background-color: var(--devui-list-item-active-bg);
+        }
     }
-
-    & .item {
-      display: block;
-      height: 40px;
-      padding-left: 1rem;
-      line-height: 40px;
-      border-radius: 20px;
-
-      &:hover {
-        color: var(--devui-list-item-hover-text);
-        background-color: var(--devui-list-item-hover-bg);
-      }
-
-      &:not(:first-child) {
-        margin-top: 8px;
-      }
-    }
-
-    & .active {
-      font-weight: bold;
-      color: var(--devui-list-item-active-text);
-      background-color: var(--devui-list-item-active-bg);
-    }
-  }
 </style>

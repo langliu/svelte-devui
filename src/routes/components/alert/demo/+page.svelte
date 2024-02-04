@@ -1,7 +1,7 @@
 <script>
   import { Alert } from '$lib';
   import ExampleCard from '$components/ExampleCard.svelte';
-  import Code from '../../Code.svelte';
+  import Code from '$components/Code.svelte';
   const example = `
 	<div style=" display: flex; flex-direction: column; gap: 20px;width: 100%;">
 \t\t<Alert type="success" closeable={false}>success</Alert>
