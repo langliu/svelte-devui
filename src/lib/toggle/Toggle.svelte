@@ -17,22 +17,22 @@
 
 <style>
   .devui-toggle {
+    position: relative;
+    box-sizing: content-box;
     display: inline-block;
     width: fit-content;
+    width: 36px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
     font-size: 0;
     line-height: 1;
     vertical-align: middle;
-    width: 36px;
-    height: 18px;
-    border-radius: var(--devui-border-radius-full);
+    cursor: pointer;
     background: var(--devui-line);
     border: 1px solid var(--devui-line);
-    position: relative;
-    box-sizing: content-box;
-    overflow: visible;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
+    border-radius: var(--devui-border-radius-full);
     transition: var(--devui-animation-duration-slow) var(--devui-animation-ease-in-out-smooth) all;
 
     &:not(.devui-checked):hover {
@@ -44,31 +44,31 @@
       display: inline-block;
       width: 100%;
       height: 100%;
+      padding-left: 14px;
       font-size: var(--devui-font-size-sm);
       line-height: 18px;
-      padding-left: 14px;
 
       & .devui-toggle-inner {
         width: 100%;
         height: 100%;
-        text-align: center;
         color: var(--devui-light-text);
+        text-align: center;
       }
     }
 
     &.devui-checked .devui-toggle-inner-wrapper {
-      padding-left: unset;
       padding-right: 14px;
+      padding-left: unset;
     }
 
     & small {
+      position: absolute;
+      top: 3px;
+      left: 3px;
       width: 12px;
       height: 12px;
       background: var(--devui-light-text);
       border-radius: var(--devui-border-radius-full);
-      position: absolute;
-      top: 3px;
-      left: 3px;
       transition: var(--devui-animation-duration-base) var(--devui-animation-ease-in-out-smooth) all;
 
       &.mouseDown {
@@ -89,21 +89,21 @@
       height: 30px;
 
       & .devui-toggle-inner-wrapper {
+        padding-left: 24px;
         font-size: var(--devui-font-size-modal-title);
         line-height: 30px;
-        padding-left: 24px;
       }
 
       &.devui-checked .devui-toggle-inner-wrapper {
-        padding-left: unset;
         padding-right: 24px;
+        padding-left: unset;
       }
 
       & small {
-        width: 22px;
-        height: 22px;
         top: 4px;
         left: 4px;
+        width: 22px;
+        height: 22px;
 
         &.mouseDown {
           width: 26px;
@@ -111,8 +111,8 @@
       }
 
       &.devui-checked small {
-        background: var(--devui-light-text);
         left: 32px;
+        background: var(--devui-light-text);
 
         &.mouseDown {
           left: 28px;
@@ -125,22 +125,22 @@
       height: 14px;
 
       & .devui-toggle-inner-wrapper {
+        padding-left: 12px;
         font-size: var(--devui-font-size-sm);
         line-height: 14px;
-        padding-left: 12px;
       }
 
       &.devui-checked .devui-toggle-inner-wrapper {
-        padding-left: unset;
         padding-right: 12px;
+        padding-left: unset;
       }
 
       & small {
-        width: 10px;
-        height: 10px;
         position: absolute;
         top: 2px;
         left: 3px;
+        width: 10px;
+        height: 10px;
 
         &.mouseDown {
           width: 12px;
