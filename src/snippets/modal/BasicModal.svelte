@@ -9,6 +9,6 @@
 </script>
 
 <Button on:click={openModal}>open dialog</Button>
-<Modal {open}>
+<Modal {open} on:close={() => (open = false)} title="Start Snapshot Version">
   <p>This is Modal</p>
 </Modal>
