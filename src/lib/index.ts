@@ -8,3 +8,4 @@ export * from '$lib/search';
 export * from '$lib/status';
 export * from '$lib/text-input';
 export * from '$lib/toggle';
+export * from '$lib/modal';
