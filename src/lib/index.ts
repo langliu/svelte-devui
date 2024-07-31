@@ -9,3 +9,4 @@ export * from '$lib/status';
 export * from '$lib/text-input';
 export * from '$lib/toggle';
 export * from '$lib/modal';
+export * from '$lib/link';
