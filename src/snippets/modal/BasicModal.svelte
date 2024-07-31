@@ -6,9 +6,24 @@
   function openModal() {
     open = true;
   }
+
+  function closeModal() {
+    open = false;
+  }
+
+  function onOk() {
+    alert('ok');
+    closeModal();
+  }
 </script>
 
-<Button on:click={openModal}>open dialog</Button>
-<Modal {open} on:close={() => (open = false)} title="Start Snapshot Version">
+<Button on:click={openModal}>打开弹窗</Button>
+<Modal
+  {open}
+  title="Start Snapshot Version"
+  on:close={closeModal}
+  on:ok={onOk}
+  on:cancel={closeModal}
+>
   <p>This is Modal</p>
 </Modal>
